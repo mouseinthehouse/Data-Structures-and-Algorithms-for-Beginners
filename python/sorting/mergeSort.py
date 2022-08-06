@@ -1,7 +1,7 @@
 # Implementation of MergeSort
 def mergeSort(arr, s, e):
     if e - s + 1 <= 1:
-        return
+        return arr
 
     # The middle index of the array
     m = (s + e) // 2
@@ -29,7 +29,7 @@ def merge(arr, s, m, e):
 
     # Merge the two sorted halfs into the original array
     while i < len(L) and j < len(R):
-        if L[i] < R[j]:
+        if L[i] <= R[j]:
             arr[k] = L[i]
             i += 1
         else:
