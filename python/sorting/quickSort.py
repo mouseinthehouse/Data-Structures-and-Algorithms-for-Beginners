@@ -9,7 +9,9 @@ def quickSort(arr, s, e):
     # Partition: elements smaller than pivot on left side
     for i in range(s, e):
         if arr[i] < pivot:
+            tmp = arr[left]
             arr[left] = arr[i]
+            arr[i] = tmp
             left += 1
 
     # Move pivot in-between left & right sides
@@ -24,4 +26,5 @@ def quickSort(arr, s, e):
 
     return arr
 
-print(quickSort([4, 3, 2, 1, 6], 0, 4))
+print(quickSort([6, 3, 2, 1, 4], 0, 4))
+    
