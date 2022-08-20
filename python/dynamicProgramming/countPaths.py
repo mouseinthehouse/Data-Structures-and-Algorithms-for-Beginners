@@ -1,4 +1,4 @@
-# Brute Force - Time and Space: O(2 ^ (n + m))
+# Brute Force - Time: O(2 ^ (n + m)), Space: O(n + m)
 def bruteForce(r, c, rows, cols):
     if r == rows or c == cols:
         return 0
@@ -7,6 +7,8 @@ def bruteForce(r, c, rows, cols):
     
     return (bruteForce(r + 1, c, rows, cols) +  
             bruteForce(r, c + 1, rows, cols))
+
+print(bruteForce(0, 0, 4, 4))
 
 # Memoization - Time and Space: O(n * m)
 def memoization(r, c, rows, cols, cache):
@@ -20,8 +22,10 @@ def memoization(r, c, rows, cols, cache):
     cache[r][c] = (memoization(r + 1, c, rows, cols, cache) +  
         memoization(r, c + 1, rows, cols, cache))
     return cache[r][c]
- 
-# Dynamic Programming - Time and Space: O(m), where m is num of cols
+
+print(memoization(0, 0, 4, 4, [[0] * 4 for i in range(4)]))
+
+# Dynamic Programming - Time: O(n * m), Space: O(m), where m is num of cols
 def dp(rows, cols):
     prevRow = [0] * cols
 
@@ -33,6 +37,4 @@ def dp(rows, cols):
         prevRow = curRow
     return prevRow[0] 
 
-print(bruteForce(0, 0, 4, 4))
-print(memoization(0, 0, 4, 4, [[0] * 4 for i in range(4)]))
 print(dp(4, 4))

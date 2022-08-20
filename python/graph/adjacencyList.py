@@ -36,7 +36,7 @@ def dfs(node, target, adjList, visit):
     visit.remove(node)
 
     return count
-    
+
 print(dfs("A", "E", adjList, set()))
 
 # Shortest path from node to target
@@ -58,7 +58,6 @@ def bfs(node, target, adjList):
                     visit.add(neighbor)
                     queue.append(neighbor)
         length += 1
-
     return length
 
 print(bfs("A", "E", adjList))

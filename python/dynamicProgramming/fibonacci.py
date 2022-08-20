@@ -1,16 +1,23 @@
+
 # Brute Force
 def bruteForce(n):
     if n <= 1:
         return n
     return bruteForce(n - 1) + bruteForce(n - 2)
 
+print(bruteForce(5))
+
 # Memoization
 def memoization(n, cache):
+    if n <= 1:
+        return n
     if n in cache:
         return cache[n]
 
-    cache[n] = bruteForce(n - 1) + bruteForce(n - 2)
+    cache[n] = memoization(n - 1) + memoization(n - 2)
     return cache[n]
+
+print(memoization(5, {}))
 
 # Dynamic Programming
 def dp(n):
@@ -26,7 +33,4 @@ def dp(n):
         i += 1
     return dp[1]
 
-
-print(bruteForce(10))
-print(memoization(10, {}))
-print(dp(10))
+print(dp(5))
