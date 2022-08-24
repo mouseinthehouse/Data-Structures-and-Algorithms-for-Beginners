@@ -1,0 +1,1 @@
+gcc -lstdc++ -std=c++11 stack.cpp
