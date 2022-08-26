@@ -31,10 +31,10 @@ def leafPath(root, path):
     return False
 
 
-
-#    4
-#  0   1
-#   7 2 0 
+# Build a tree like:
+#       4
+#    0     1
+#     7  2   0 
 
 root = TreeNode(4)
 root.left = TreeNode(0)
@@ -46,4 +46,4 @@ root.right.right = TreeNode(0)
 print(canReachLeaf(root))
 path = []
 print(leafPath(root, path))
-print(path)
+print(path) # [4, 1, 2]

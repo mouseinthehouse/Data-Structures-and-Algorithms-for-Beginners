@@ -42,9 +42,6 @@ class HashMap:
             index += 1
             index = index % self.capacity
     
-    # This remove is buggy, becaause if we remove, we create holes 
-    # in array, then searching hashmap may return false even if a key exists
-    # So don't mark the node as null, put some dummy there
     def remove(self, key):
         if not self.get(key):
             return
@@ -52,6 +49,9 @@ class HashMap:
         index = self.hash(key)
         while True:
             if self.map[index].key == key:
+                # Removing an element using open-addressing actually causes a bug,
+                # because we may create a hole in the list, and our get() may 
+                # stop searching early when it reaches this hole.
                 self.map[index] = None
                 self.size -= 1
                 return
@@ -70,7 +70,12 @@ class HashMap:
         for pair in oldMap:
             if pair:
                 self.put(pair.key, pair.val)
-        
+    
+    def print(self):
+        for pair in self.map:
+            if pair:
+                print(pair.key, pair.val)
+
 
 hashmap = HashMap()
 hashmap.put("Alice", "NYC")
@@ -84,28 +89,20 @@ print(hashmap.get("Daniel"))
 
 hashmap.put("Collin", "Vancouver")
 print(hashmap.get("Collin"))
-
-for pair in hashmap.map:
-    if pair:
-        print(pair.key, pair.val)
+hashmap.print()
 
 hashmap.remove("Collin")
 print("after remove collin")
-for pair in hashmap.map:
-    if pair:
-        print(pair.key, pair.val)
+hashmap.print()
+
 hashmap.remove("Alice")
 print("after remove alice")
-for pair in hashmap.map:
-    if pair:
-        print(pair.key, pair.val)
+hashmap.print()
+
 hashmap.remove("Alice")
 print("after remove alice")
-for pair in hashmap.map:
-    if pair:
-        print(pair.key, pair.val)
+hashmap.print()
+
 hashmap.remove("Brad")
 print("after remove brad")
-for pair in hashmap.map:
-    if pair:
-        print(pair.key, pair.val)
+hashmap.print()
