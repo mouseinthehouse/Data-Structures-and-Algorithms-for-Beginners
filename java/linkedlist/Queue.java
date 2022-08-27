@@ -1,4 +1,4 @@
-// Definition of singly-linked list:
+
 
 // public class ListNode {
 //     int val;
