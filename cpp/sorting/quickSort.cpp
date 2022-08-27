@@ -5,7 +5,7 @@ using std::vector;
 using std::cout;
 using std::endl;
 
-vector<int> quickSort(vector<int> arr, int s, int e) {
+vector<int> quickSort(vector<int>& arr, int s, int e) {
     if (e - s + 1 <= 1) {
         return arr;
     }
@@ -36,13 +36,13 @@ vector<int> quickSort(vector<int> arr, int s, int e) {
 }
 
 int main() {
-    vector<int> arr = {};
+    vector<int> arr = {4, 3, 2, 1, 6};
 
     quickSort(arr, 0, arr.size() - 1);
 
     for (auto n: arr) {
-        cout << n << endl;
+        cout << n << ' ';
     }
-
+    cout << endl;
     return 0;
 }
