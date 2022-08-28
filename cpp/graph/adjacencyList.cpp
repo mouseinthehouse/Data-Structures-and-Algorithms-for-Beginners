@@ -20,11 +20,13 @@ public:
 };
 
 // Or use a HashMap
-// unordered_map<string, vector<string>> adjList = {{"A", vector<string>{}}, {"B", vector<string>{}}};
+// unordered_map<string, vector<string>> adjList = 
+//     {{"A", vector<string>{}}, {"B", vector<string>{}}};
 
 // Given directed edges, build an adjacency list
 unordered_map<string, vector<string>> buildAdjList() {
-    vector<vector<string>> edges = {{"A", "B"}, {"B", "C"}, {"B", "E"}, {"C", "E"}, {"E", "D"}};
+    vector<vector<string>> edges = 
+        {{"A", "B"}, {"B", "C"}, {"B", "E"}, {"C", "E"}, {"E", "D"}};
     unordered_map<string, vector<string>> adjList;
 
     for (vector<string> edge:  edges) {
@@ -35,7 +37,8 @@ unordered_map<string, vector<string>> buildAdjList() {
 }
 
 // Count paths (backtracking)
-int dfs(string& node, string& target, unordered_map<string, vector<string>>& adjList, unordered_set<string>& visit) {
+int dfs(string& node, string& target, unordered_map<string, vector<string>>& adjList,
+    unordered_set<string>& visit) {
     if (visit.count(node)) {
         return 0;
     }

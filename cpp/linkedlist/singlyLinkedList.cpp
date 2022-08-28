@@ -13,6 +13,7 @@ public:
     }
 };
 
+// Implementation for Singly Linked List
 class LinkedList {
 public:
     ListNode* head;

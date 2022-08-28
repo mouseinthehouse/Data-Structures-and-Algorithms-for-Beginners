@@ -2,7 +2,6 @@
 
 using std::vector;
 
-// C++ implementation of Bucket Sort
 vector<int> bucketSort(vector<int>& arr) {
     // Assuming arr only contains 0, 1 or 2
     int counts[] = {0, 0, 0};

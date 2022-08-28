@@ -14,6 +14,7 @@ public:
     }
 };
 
+// Implementation for Doubly Linked List
 class LinkedList {
 public:
     ListNode* head;

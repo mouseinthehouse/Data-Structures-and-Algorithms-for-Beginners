@@ -40,7 +40,6 @@ class LinkedList:
         self.tail.prev.prev.next = self.tail
         self.tail.prev = self.tail.prev.prev
 
-
     def print(self):
         curr = self.head.next
         while curr != self.tail:

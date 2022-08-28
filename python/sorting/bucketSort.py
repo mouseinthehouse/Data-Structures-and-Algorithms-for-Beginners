@@ -1,4 +1,3 @@
-# Python implementation of Bucket Sort
 def bucketSort(arr):
     # Assuming arr only contains 0, 1 or 2
     counts = [0, 0, 0]

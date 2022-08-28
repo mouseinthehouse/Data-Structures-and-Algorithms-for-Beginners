@@ -13,7 +13,6 @@ def removeEnd(arr, length):
         # We would also the length to decreased by 1.
         arr[length - 1] = 0
 
-
 # Insert n into index i after shifting elements to the right.
 # Assuming i is a valid index and arr is not full.
 def insertMiddle(arr, i, n, length):
@@ -23,7 +22,6 @@ def insertMiddle(arr, i, n, length):
     
     # Insert at i
     arr[i] = n
-
 
 # Remove value at index i before shifting elements to the left.
 # Assuming i is a valid index.
