@@ -6,7 +6,7 @@ using std::cout;
 using std::endl;
 
 // C++ implementation of Bucket Sort
-vector<int> bucketSort(vector<int> arr) {
+vector<int> bucketSort(vector<int>& arr) {
     // Assuming arr only contains 0, 1 or 2
     int counts[] = {0, 0, 0};
 
@@ -17,7 +17,7 @@ vector<int> bucketSort(vector<int> arr) {
 
     int i = 0;
     for (int n = 0; n < 3; n++) {
-        for (int j = 0; i < counts[n]; j++) {
+        for (int j = 0; j < counts[n]; j++) {
             arr[i] = n;
             i++;
         }
@@ -26,12 +26,12 @@ vector<int> bucketSort(vector<int> arr) {
 }
 
 int main() {
-    int a[] = {2, 1, 2, 0, 0, 2};
-    //vector<int> arr = vector<int>(a);
-    
+    vector<int> arr =  {2, 1, 2, 0, 0, 2};
+
     bucketSort(arr);
-    for (auto n: a) {
-        cout << n;
+
+    for (auto n: arr) {
+        cout << n << ' ';
     }
     cout << endl;
     return 0;

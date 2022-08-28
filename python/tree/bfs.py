@@ -1,5 +1,4 @@
 from collections import deque
-from insertAndRemove import insert
 
 class TreeNode:
     def __init__(self, val):
@@ -24,11 +23,3 @@ def bfs(root):
             if curr.right:
                 queue.append(curr.right)
         level += 1
-
-root = insert(None, 4)
-insert(root, 7)
-insert(root, 6)
-insert(root, 1)
-insert(root, 3)
-insert(root, 10)
-bfs(root)

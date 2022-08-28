@@ -5,7 +5,7 @@ using std::vector;
 using std::cout;
 using std::endl;
 
-vector<int> insertionSort(vector<int> arr) {
+vector<int> insertionSort(vector<int>& arr) {
     for (int i = 1; i < arr.size(); i++) {
         int j = i - 1;
         while (j >= 0 && arr[j + 1] < arr[j]) {
@@ -19,14 +19,12 @@ vector<int> insertionSort(vector<int> arr) {
 }
 
 int main() {
-    int a[] = {4, 3, 2, 1, 6};
-    //vector<int> arr = vector<int>(a);
-    
-    std::vector<int> v = {0, 1, 2, 3, 4, 5};
+    std::vector<int> arr = {4, 3, 2, 1, 6};
 
-    // insertionSort(arr);
-    for (auto n: v) {
-        cout << n;
+    insertionSort(arr);
+
+    for (auto n: arr) {
+        cout << n << ' ';
     }
     cout << endl;
     return 0;
