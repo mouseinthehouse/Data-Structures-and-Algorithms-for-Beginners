@@ -4,69 +4,66 @@ using std::cout;
 using std::endl;
 
 class ListNode {
-    public:
-        int val_;
-        ListNode* next = nullptr;
+public:
+    int val_;
+    ListNode* next = nullptr;
+    ListNode* prev = nullptr;
 
-        ListNode(int val) {
-            val_ = val;
-        }
+    ListNode(int val) {
+        val_ = val;
+    }
 };
 
 class LinkedList {
-    public:
-        ListNode* head;
-        ListNode* tail;
+public:
+    ListNode* head;
+    ListNode* tail;
 
-        LinkedList() {
-            // Init the list with a 'dummy' node which makes 
-            // removing a node from the beginning of list easier.
-            head = new ListNode(-1);
-            tail = head;
-        }
+    LinkedList() {
+        // Init the list with a 'dummy' node which makes 
+        // removing a node from the beginning of list easier.
+        head = new ListNode(-1);
+        tail = new ListNode(-1);
+        head->next = tail;
+        tail->prev = head;
+    }
 
-        void insertEnd(int val) {
-            tail->next = new ListNode(val);
-            tail = tail->next;
-        }
+    void insertFront(int val) {
+        ListNode* newNode = new ListNode(val);
+        newNode->prev = head;
+        newNode->next = head->next;
 
-        void remove(int index) {
-            int i = 0;
-            ListNode* curr = head;
-            while (i < index && curr) {
-                i++;
-                curr = curr->next;
-            }
-            
-            // Remove the node ahead of curr
-            if (curr) {
-                curr->next = curr->next->next;
-            }
-        }
+        head->next->prev = newNode;
+        head->next = newNode;
+    }
 
-        void print() {
-            ListNode* curr = head->next;
-            while (curr) {
-                cout << curr->val_ << " -> ";
-                curr = curr->next;
-            }
-            cout << endl;
+    void insertEnd(int val) {
+        ListNode* newNode = new ListNode(val);
+        newNode->next = tail;
+        newNode->prev = tail->prev;
+
+        tail->prev->next = newNode;
+        tail->prev = newNode;
+    }
+
+    // Remove first node after dummy head (assume it exists)
+    void removeFront() {
+        head->next->next->prev = head;
+        head->next = head->next->next;
+    }
+
+    // Remove last node before dummy tail (assume it exists)
+    void removeEnd() {
+        tail->prev->prev->next = tail;
+        tail->prev = tail->prev->prev;
+    }
+
+    void print() {
+        ListNode* curr = head->next;
+        while (curr != tail) {
+            cout << curr->val_ << " -> ";
+            curr = curr->next;
         }
+        cout << endl;
+    }
 };   
-
-int main() {
-    LinkedList* list = new LinkedList();
-
-    list->insertEnd(1);
-    list->insertEnd(2);
-    list->insertEnd(3);
-    list->insertEnd(4);
-
-    list->print();
-
-    list->remove(3);
-    list->remove(0);
-
-    list->print();
-    return 0;
-}

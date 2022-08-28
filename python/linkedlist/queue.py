@@ -4,6 +4,7 @@ class ListNode:
         self.next = None
 
 class Queue:
+    # Implementing this with dummy nodes would be easier!
     def __init__(self):
         self.left = self.right = None
     

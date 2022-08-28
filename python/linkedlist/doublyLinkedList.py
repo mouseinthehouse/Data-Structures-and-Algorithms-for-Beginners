@@ -35,7 +35,7 @@ class LinkedList:
         self.head.next.next.prev = self.head
         self.head.next = self.head.next.next
 
-    # Remove first node before dummy tail (assume it exists)
+    # Remove last node before dummy tail (assume it exists)
     def removeEnd(self):
         self.tail.prev.prev.next = self.tail
         self.tail.prev = self.tail.prev.prev
