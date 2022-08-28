@@ -14,5 +14,3 @@ def bucketSort(arr):
             arr[i] = n
             i += 1
     return arr
-
-print(bucketSort([2, 1, 2, 0, 0, 2]))    

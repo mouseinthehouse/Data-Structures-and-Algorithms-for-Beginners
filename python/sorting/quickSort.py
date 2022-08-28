@@ -25,6 +25,4 @@ def quickSort(arr, s, e):
     quickSort(arr, left + 1, e)
 
     return arr
-
-print(quickSort([6, 3, 2, 1, 4], 0, 4))
     

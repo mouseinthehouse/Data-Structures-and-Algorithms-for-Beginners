@@ -75,34 +75,3 @@ class HashMap:
         for pair in self.map:
             if pair:
                 print(pair.key, pair.val)
-
-
-hashmap = HashMap()
-hashmap.put("Alice", "NYC")
-hashmap.put("Brad", "Chicago")
-hashmap.put("Collin", "Seattle")
-
-print(hashmap.get("Alice"))
-print(hashmap.get("Brad"))
-print(hashmap.get("Collin"))
-print(hashmap.get("Daniel"))
-
-hashmap.put("Collin", "Vancouver")
-print(hashmap.get("Collin"))
-hashmap.print()
-
-hashmap.remove("Collin")
-print("after remove collin")
-hashmap.print()
-
-hashmap.remove("Alice")
-print("after remove alice")
-hashmap.print()
-
-hashmap.remove("Alice")
-print("after remove alice")
-hashmap.print()
-
-hashmap.remove("Brad")
-print("after remove brad")
-hashmap.print()

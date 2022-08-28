@@ -3,6 +3,7 @@ class ListNode:
         self.val = val
         self.next = None
 
+# Implementation for Singly Linked List
 class LinkedList:
     def __init__(self):
         # Init the list with a 'dummy' node which makes 
@@ -31,16 +32,3 @@ class LinkedList:
             print(curr.val, ' -> ')
             curr = curr.next
         print()
-
-myList = LinkedList()
-myList.insertEnd(1)
-myList.insertEnd(2)
-myList.insertEnd(3)
-myList.insertEnd(4)
-
-myList.print() # 1 -> 2 -> 3 -> 4 -> 
-
-myList.remove(3)
-myList.remove(2)
-
-myList.print() # 1 -> 2 ->

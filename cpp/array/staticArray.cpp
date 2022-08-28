@@ -43,27 +43,3 @@ void printArr(int arr[], int capacity) {
     }
     cout << endl;
 }
-
-int main() {
-    int arr[] = {1, 3, 0};
-    int length = 2, capacity = 3;
-
-    insertEnd(arr, 5, length, capacity);
-    length += 1;
-    printArr(arr, capacity);
-
-    removeEnd(arr, length);
-    length -= 1;
-    printArr(arr, capacity);
-
-
-    insertMiddle(arr, 0, 5, length);           // [5, 1, 3]
-    length += 1;
-    printArr(arr, capacity);
-
-    removeMiddle(arr, 0, length) ;             // [1, 3, 3], the last 3 is considered a dummy value
-    length -= 1;
-    printArr(arr, capacity);
-
-    return 0;
-}

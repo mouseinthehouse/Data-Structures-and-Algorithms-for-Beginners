@@ -10,5 +10,3 @@ def insertionSort(arr):
             arr[j] = tmp
             j -= 1
     return arr
-
-print(insertionSort([4, 3, 2, 1, 6]))

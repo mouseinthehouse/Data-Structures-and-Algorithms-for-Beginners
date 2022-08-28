@@ -23,6 +23,3 @@ def countBits(n):
             count += 1
         n = n >> 1 # same as n // 2
     return count
-
-# 23 = 10111
-print(countBits(23))

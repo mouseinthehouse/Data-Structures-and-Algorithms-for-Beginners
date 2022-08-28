@@ -1,9 +1,6 @@
-#include <iostream>
 #include <vector>
 
 using std::vector;
-using std::cout;
-using std::endl;
 
 int isCorrect(int n) {
     if (n > 10) {
@@ -28,12 +25,4 @@ int binarySearch(int low, int high) {
         }
     }
     return -1;
-}
-
-int main() {
-    cout << binarySearch(1, 100) << endl;
-    cout << binarySearch(-50, 5) << endl;
-    cout << binarySearch(1, 7) << endl;
-
-    return 0;
 }

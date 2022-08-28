@@ -34,16 +34,3 @@ class Queue:
             print(cur.val, ' -> ', end ="")
             cur = cur.next
         print() # new line
-
-q = Queue()
-
-q.enqueue(1)  # 1  ->
-q.enqueue(2)  # 1  -> 2  ->
-
-q.dequeue()   # 2  ->
-
-q.enqueue(3)  # 2  -> 3 ->
-q.enqueue(4)  # 2  -> 3 -> 4 ->
- 
-q.dequeue()   # 2  -> 3 ->
-q.dequeue()   # 2  ->

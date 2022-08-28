@@ -14,9 +14,3 @@ def binarySearch(arr, target):
         else:
             return mid
     return -1
-
-print(binarySearch(arr, 10))
-print(binarySearch(arr, 0))
-print(binarySearch(arr, 1))
-print(binarySearch(arr, 5))
-print(binarySearch(arr, 6))

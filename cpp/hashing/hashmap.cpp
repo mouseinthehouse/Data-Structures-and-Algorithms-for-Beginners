@@ -104,32 +104,3 @@ public:
         }
     }
 };
-
-int main() {
-    string alice = "Alice", brad = "Brad", collin = "Collin";
-    string nyc = "NYC", chicago = "Chicago", seattle = "Seattle";
-    HashMap hashmap = HashMap();
-    hashmap.print();
-    hashmap.put(alice, nyc);
-    hashmap.print();
-    hashmap.put(brad, chicago);
-    hashmap.print();
-    hashmap.put(collin, seattle);
-    hashmap.print();
-
-    hashmap.get(alice);
-    cout << (*hashmap.get(alice));
-    cout << (*hashmap.get(brad));
-    cout << (*hashmap.get(collin)) << endl;
-
-    hashmap.remove(collin);
-    hashmap.print();
-
-    hashmap.remove(alice);
-    hashmap.print();
-
-    hashmap.remove(brad);
-    hashmap.print();
-
-    return 0;
-}

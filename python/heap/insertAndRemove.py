@@ -48,25 +48,3 @@ class Heap:
         if len(self.heap) > 1:
             return self.heap[1]
         return None
-
-#       14
-#   19      16
-# 21  26  19  68
-#65 30 32
-
-
-minHeap = Heap()
-minHeap.heapify([59,  26, 19, 16, 21, 14, 68, 65, 30, 32])
-while len(minHeap.heap) > 1:
-    print(minHeap.pop())
-
-
-# minHeap.heap = [0, 14, 19, 16, 21, 26, 19, 68, 65, 30, 32]
-# nums = [0, 14, 19, 16, 21, 26, 19, 68, 65, 30, 32]
-# nums.reverse()
-# for n in nums:
-#     minHeap.push(n)
-
-# while len(minHeap.heap) > 1:
-#     print(minHeap.top())
-#     print(minHeap.pop())

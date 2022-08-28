@@ -46,39 +46,3 @@ class Array:
         for i in range(self.length):
             print(self.arr[i])
         print()
-
-myArray = Array()
-
-# Add elements
-myArray.pushback(1)
-myArray.pushback(3)
-myArray.pushback(5)
-# [1, 3, 5]
-myArray.print()
-
-# Add elements
-myArray.pushback(7)
-myArray.pushback(8)
-myArray.pushback(9)
-# [1, 3, 5, 7, 8, 9]
-myArray.print()
-
-# Remove elements
-myArray.popback()
-myArray.popback()
-myArray.popback()
-# [1, 3, 5]
-myArray.print()
-
-# Remove elements
-myArray.popback()
-myArray.popback()
-myArray.popback()
-# []
-myArray.print()
-
-# Try to remove but nothing is left
-myArray.popback()
-myArray.popback()
-# []
-myArray.print()

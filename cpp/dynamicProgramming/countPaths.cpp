@@ -1,8 +1,5 @@
-#include <iostream>
 #include <vector>
 
-using std::cout;
-using std::endl;
 using std::vector;
 
 // Brute Force - Time: O(2 ^ (n + m)), Space: O(n + m)
@@ -46,24 +43,4 @@ int dp(int rows, int cols) {
         prevRow = curRow;
     }
     return prevRow[0];
-}
-
-int main() {
-    // F(0) = 0
-    // F(1) = 1
-    // F(2) = 1
-    // F(3) = 2
-    // F(4) = 3
-    // F(5) = 5
-    cout << bruteForce(0, 0, 4, 4) << endl;
-    vector<vector<int>> cache(4, vector<int>(4));
-    //int **cache = new int [4][4]();
-    // for (int i = 0; i < 4; i++) {
-    //     for (int j = 0; i < 4; j++) {
-    //         cache[i][j] = 0;
-    //     }
-    // }
-    cout << memoization(0, 0, 4, 4, cache) << endl;
-    cout << dp(4, 4) << endl;
-    return 0;
 }

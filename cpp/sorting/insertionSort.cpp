@@ -1,9 +1,6 @@
 #include <vector>
-#include <iostream>
 
 using std::vector;
-using std::cout;
-using std::endl;
 
 vector<int> insertionSort(vector<int>& arr) {
     for (int i = 1; i < arr.size(); i++) {
@@ -16,16 +13,4 @@ vector<int> insertionSort(vector<int>& arr) {
         }
     }
     return arr;
-}
-
-int main() {
-    std::vector<int> arr = {4, 3, 2, 1, 6};
-
-    insertionSort(arr);
-
-    for (auto n: arr) {
-        cout << n << ' ';
-    }
-    cout << endl;
-    return 0;
 }

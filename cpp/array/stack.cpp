@@ -1,18 +1,22 @@
-#include <map>
-#include <iostream>
+#include <vector>
 
-using std::string;
-using std::cout;
-using std::endl;
+using std::vector;
 
+// Implementing a stack is trivial using a dynamic array
+// (which we implemented earlier).
+class Stack {
+public:
+    vector<int> stack_;
 
+    Stack() {};
 
-
-int main() {
-    std::map<string, string> count;
-    string list[] = {"abc", "def"};
-    for (auto s: list) {
-        cout << s << endl;
+    void push(int n) {
+        stack_.push_back(n);
     }
-    return 0;
-}
+
+    int pop() {
+        int res = stack_[stack_.size() - 1];
+        stack_.pop_back();
+        return res;
+    }
+};

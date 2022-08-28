@@ -24,5 +24,3 @@ def dfs(grid, r, c, visit):
 
     visit.remove((r, c))
     return count
-
-print(dfs(grid, 0, 0, set()))

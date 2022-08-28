@@ -1,11 +1,8 @@
-#include <iostream>
 #include <vector>
 #include <algorithm>
 
 using std::vector;
 using std::min;
-using std::cout;
-using std::endl;
 
 // Count paths (backtracking)
 // In C++ it's easier to use a 2D array for visit rather than a hashset.
@@ -29,18 +26,4 @@ int dfs(vector<vector<int>>& grid, int r, int c, vector<vector<int>>& visit) {
 
     visit[r][c] = 0;
     return count;
-}
-
-int main() {
-    vector<vector<int>> grid {
-        {0, 0, 0, 0},
-        {1, 1, 0, 0},
-        {0, 0, 0, 1},
-        {0, 1, 0, 0}
-    };
-    vector<vector<int>> visit(4, vector<int>(4));
-
-    cout << dfs(grid, 0, 0, visit) << endl;
-
-    return 0;
 }

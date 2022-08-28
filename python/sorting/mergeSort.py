@@ -46,6 +46,3 @@ def merge(arr, s, m, e):
         arr[k] = R[j]
         j += 1
         k += 1
-
-
-print(mergeSort([4, 3, 2, 1, 6], 0, 4))

@@ -1,21 +1,14 @@
-#include <iostream>
 #include <vector>
 #include <queue>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
-#include <algorithm>
-#include <utility>
 
 using std::vector;
 using std::queue;
 using std::string;
 using std::unordered_map;
 using std::unordered_set;
-using std::pair;
-using std::min;
-using std::cout;
-using std::endl;
 
 // GraphNode used for adjacency list
 class GraphNode {
@@ -84,32 +77,4 @@ int bfs(string& node, string& target, unordered_map<string, vector<string>>& adj
         length++;
     }
     return length;
-}
-
-int main() {
-    unordered_map<string, vector<string>> adjList = buildAdjList();
-
-    for (auto const& src : adjList) {
-        std::cout << src.first << ' ';
-
-        for (auto const& neighbor : src.second) {
-            std::cout << neighbor << ' ';
-        }
-        cout << endl;
-    }
-    string src = "A";
-    string dst = "E";
-    unordered_set<string> visit;
-    cout << dfs(src, dst, adjList, visit) << endl;;
-
-    vector<vector<int>> grid {
-        {0, 0, 0, 0},
-        {1, 1, 0, 0},
-        {0, 0, 0, 1},
-        {0, 1, 0, 0}
-    };
-    
-    cout << bfs(src, dst, adjList) << endl;
-
-    return 0;
 }

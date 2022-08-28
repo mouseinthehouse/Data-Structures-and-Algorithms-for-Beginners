@@ -7,5 +7,3 @@ for name in names:
         countMap[name] = 1
     else:
         countMap[name] += 1
-
-print(countMap)

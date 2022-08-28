@@ -36,24 +36,3 @@ def removeMiddle(arr, i, length):
 def printArr(arr, capacity):
     for i in range(capacity):
         print(arr[i])
-
-
-arr = [1, 3, 0] # we consider the 0 to be a dummy value
-length = 2
-capacity = 3
-
-insertEnd(arr, 5, length, capacity)       # [1, 3, 5]
-length += 1
-printArr(arr, capacity)
-
-removeEnd(arr, length)                    # [1, 3, 0]
-length -= 1
-printArr(arr, capacity)
-
-insertMiddle(arr, 0, 5, length)           # [5, 1, 3]
-length += 1
-printArr(arr, capacity)
-
-removeMiddle(arr, 0, length)              # [1, 3, 3], the last 3 is considered a dummy value
-length -= 1
-printArr(arr, capacity)

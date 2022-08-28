@@ -37,8 +37,6 @@ def dfs(node, target, adjList, visit):
 
     return count
 
-print(dfs("A", "E", adjList, set()))
-
 # Shortest path from node to target
 def bfs(node, target, adjList):
     length = 0
@@ -60,4 +58,3 @@ def bfs(node, target, adjList):
         length += 1
     return length
 
-print(bfs("A", "E", adjList))

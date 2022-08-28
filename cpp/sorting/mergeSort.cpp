@@ -1,9 +1,6 @@
-#include <iostream>
 #include <vector>
 
 using std::vector;
-using std::cout;
-using std::endl;;
 
 void merge(vector<int>& arr, int s, int m, int e) {
     // Copy the sorted left & right halfs to temp arrays
@@ -49,16 +46,4 @@ vector<int> mergeSort(vector<int>& arr, int s, int e) {
     merge(arr, s, m, e);
     
     return arr;
-}
-
-int main() {
-    vector<int> arr = {4, 3, 2, 1, 6};
-
-    mergeSort(arr, 0, arr.size() - 1);
-
-    for (auto n: arr) {
-        cout << n << ' ';
-    }
-    cout << endl;
-    return 0;
 }

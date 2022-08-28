@@ -69,32 +69,3 @@ public:
         cout << endl;
     }
 };
-
-int main() {
-    Array myArray;
-    myArray.pushback(1);
-    myArray.pushback(3);
-    myArray.pushback(5);
-    myArray.print();
-
-    myArray.pushback(7);
-    myArray.pushback(8);
-    myArray.pushback(9);
-    myArray.print();
-
-    myArray.popback();
-    myArray.popback();
-    myArray.popback();
-    myArray.print();
-
-    myArray.popback();
-    myArray.popback();
-    myArray.popback();
-    myArray.print();
-
-    myArray.popback();
-    myArray.popback();
-    myArray.print();
-
-    return 0;
-}

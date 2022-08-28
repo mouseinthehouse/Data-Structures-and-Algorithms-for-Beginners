@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 #include <queue>
 #include <algorithm>
@@ -8,8 +7,7 @@ using std::vector;
 using std::queue;
 using std::pair;
 using std::min;
-using std::cout;
-using std::endl;
+
 
 // Shortest path from top left to bottom right
 int bfs(vector<vector<int>>& grid) {
@@ -45,17 +43,4 @@ int bfs(vector<vector<int>>& grid) {
         }
         length++;
     }
-}
-
-int main() {
-    vector<vector<int>> grid {
-        {0, 0, 0, 0},
-        {1, 1, 0, 0},
-        {0, 0, 0, 1},
-        {0, 1, 0, 0}
-    };
-    
-    cout << bfs(grid) << endl;
-
-    return 0;
 }

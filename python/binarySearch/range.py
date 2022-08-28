@@ -22,7 +22,3 @@ def isCorrect(n):
         return -1
     else:
         return 0
-
-print(binarySearch(1, 100))
-print(binarySearch(-50, 5))
-print(binarySearch(1, 7))

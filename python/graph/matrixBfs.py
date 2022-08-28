@@ -30,5 +30,3 @@ def bfs(grid):
                 queue.append((r + dr, c + dc))
                 visit.add((r + dr, c + dc))
         length += 1
-
-print(bfs(grid))

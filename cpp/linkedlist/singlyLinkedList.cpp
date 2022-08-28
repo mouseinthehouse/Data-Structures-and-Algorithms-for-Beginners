@@ -53,20 +53,3 @@ class LinkedList {
             cout << endl;
         }
 };   
-
-int main() {
-    LinkedList* list = new LinkedList();
-
-    list->insertEnd(1);
-    list->insertEnd(2);
-    list->insertEnd(3);
-    list->insertEnd(4);
-
-    list->print();
-
-    list->remove(3);
-    list->remove(0);
-
-    list->print();
-    return 0;
-}

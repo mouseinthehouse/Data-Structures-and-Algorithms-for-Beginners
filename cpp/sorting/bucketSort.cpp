@@ -1,9 +1,6 @@
 #include <vector>
-#include <iostream>
 
 using std::vector;
-using std::cout;
-using std::endl;
 
 // C++ implementation of Bucket Sort
 vector<int> bucketSort(vector<int>& arr) {
@@ -23,16 +20,4 @@ vector<int> bucketSort(vector<int>& arr) {
         }
     }
     return arr;
-}
-
-int main() {
-    vector<int> arr =  {2, 1, 2, 0, 0, 2};
-
-    bucketSort(arr);
-
-    for (auto n: arr) {
-        cout << n << ' ';
-    }
-    cout << endl;
-    return 0;
 }
