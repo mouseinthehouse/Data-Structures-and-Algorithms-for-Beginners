@@ -22,9 +22,4 @@ public class BucketSort {
         }
         return arr;
     }
-
-    public static void main(String[] args) {
-        int[] arr = {2, 1, 2, 0, 0, 2};
-        System.out.println(Arrays.toString(bucketSort(arr)));
-    }
 }

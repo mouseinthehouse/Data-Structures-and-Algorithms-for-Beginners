@@ -10,7 +10,6 @@ public class Pair {
 }
 */
 
-
 public class HashMap {
     int size;
     int capacity;  
@@ -104,37 +103,5 @@ public class HashMap {
                 System.out.println(p.key + " " + p.val);
             }
         }
-    }
-
-    public static void main(String[] args) {
-        HashMap hashmap = new HashMap();
-        hashmap.put("Alice", "NYC");
-        hashmap.put("Brad", "Chicago");
-        hashmap.put("Collin", "Seattle");
-
-        System.out.println(hashmap.get("Alice"));
-        System.out.println(hashmap.get("Brad"));
-        System.out.println(hashmap.get("Collin"));
-        System.out.println(hashmap.get("Daniel"));
-
-        hashmap.put("Collin", "Vancouver");
-        System.out.println(hashmap.get("Collin"));
-        hashmap.print();
-
-        hashmap.remove("Collin");
-        System.out.println("after remove collin");
-        hashmap.print();
-
-        hashmap.remove("Alice");
-        System.out.println("after remove alice");
-        hashmap.print();
-
-        hashmap.remove("Alice");
-        System.out.println("after remove alice");
-        hashmap.print();
-
-        hashmap.remove("Brad");
-        System.out.println("after remove brad");
-        hashmap.print();
     }
 }

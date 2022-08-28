@@ -1,6 +1,4 @@
 public class Range {
-    // low = 1, high = 100
-
     // Binary search on some range of values
     public static int binarySearch(int low, int high) {
         int mid;
@@ -28,11 +26,5 @@ public class Range {
         } else {
             return 0;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(binarySearch(1, 100));
-        System.out.println(binarySearch(-50, 5));
-        System.out.println(binarySearch(1, 7));
     }
 }

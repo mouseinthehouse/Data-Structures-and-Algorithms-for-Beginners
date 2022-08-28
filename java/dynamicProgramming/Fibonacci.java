@@ -16,7 +16,6 @@ public class Fibonacci {
         if (cache[n] != 0) {
             return cache[n];
         }
-
         cache[n] = memoization(n - 1, cache) + memoization(n - 2, cache);
         return cache[n];
     }
@@ -36,14 +35,6 @@ public class Fibonacci {
             i++;
         }
         return dp[1];
-    }
-
-    public static void main(String[] args) {
-        System.out.println(bruteForce(5));
-
-        System.out.println(memoization(5, new int[6]));
-
-        System.out.println(dp(5));
     }
 }
 

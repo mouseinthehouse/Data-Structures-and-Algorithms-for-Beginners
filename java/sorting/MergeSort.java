@@ -68,9 +68,5 @@ public class MergeSort {
             j++;
             k++;
         }
-    } 
-    public static void main(String[] args) {
-        int[] arr = {4, 3, 2, 1, 6,};
-        System.out.println(Arrays.toString(mergeSort(arr, 0, arr.length - 1)));
     }
 }

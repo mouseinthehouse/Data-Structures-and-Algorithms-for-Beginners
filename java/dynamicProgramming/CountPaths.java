@@ -5,11 +5,9 @@ public class CountPaths {
         if (r == rows || c == cols) {
             return 0;
         }
-        
         if (r == rows - 1 && c == cols - 1) {
             return 1;
         }
-            
         return (bruteForce(r + 1, c, rows, cols) +  
                 bruteForce(r, c + 1, rows, cols));
     }   
@@ -25,7 +23,6 @@ public class CountPaths {
         if (r == rows - 1 && c == cols - 1) {
             return 1;
         }
-            
         cache[r][c] = (memoization(r + 1, c, rows, cols, cache) +  
                         memoization(r, c + 1, rows, cols, cache));
         return cache[r][c];
@@ -45,13 +42,4 @@ public class CountPaths {
         } 
         return prevRow[0];
     }
-
-    public static void main(String[] args) {    
-        System.out.println(bruteForce(0, 0, 4, 4));
-
-        System.out.println(memoization(0, 0, 4, 4, new int[4][4]));
-
-        System.out.println(dp(4,4));
-    }
-
 }

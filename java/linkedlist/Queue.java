@@ -1,5 +1,3 @@
-
-
 // public class ListNode {
 //     int val;
 //     ListNode next;
@@ -53,22 +51,3 @@ public class Queue {
     }
 
 }
-
-// public class Main {
-//     public static void main(String[] args) {
-//         Queue q = new Queue();
-
-//         q.enqueue(1);  // 1  ->
-//         q.enqueue(2);  // 1  -> 2  ->
-       
-//         q.dequeue();   // 2 ->
-    
-//         q.enqueue(3);  // 2  -> 3 ->
-//         q.enqueue(4);  // 2  -> 3 -> 4 ->
-       
-//         q.dequeue();   // 3  -> 4 ->
-//         q.dequeue();   // 4 ->
-       
-//     }
-// }
-
