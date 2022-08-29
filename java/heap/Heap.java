@@ -12,6 +12,7 @@ public class Heap {
 
     public Heap() {
         heap = new ArrayList<Integer>();
+        heap.add(0);
     }
 
     public void push(int val) {
@@ -66,10 +67,40 @@ public class Heap {
         if (heap.size() > 1) {
             return heap.get(1);
         }
-        
+        // Normally we would throw an exception if heap is empty.
+        return -1;
     }
 
-    public void heapify(int[] arr) {
-        heap.addAll(Arrays.asList(arr));
+    public void heapify(ArrayList<Integer> arr) {
+        // 0-th position is moved to the end
+        arr.add(arr.get(0));
+
+        heap = arr;
+        int cur = (heap.size() - 1) / 2;
+        while (cur > 0) {
+            // Percolate Down
+            int i = cur;
+            while (2 * i < heap.size()) {
+                if (2 + i + 1 < heap.size() &&
+                heap.get(2 + i + 1) < heap.get(2 * i) &&
+                heap.get(i) > heap.get(2 * i + 1)) {
+                    // Swap right child
+                    int tmp = heap.get(i);
+                    heap.set(i, heap.get(2 * i + 1));
+                    heap.set(2 * i + 1, tmp);
+                    i = 2 * i + 1;
+                } else if (heap.get(i) > heap.get(2 * i)) {
+                    // Swap left child
+                    int tmp = heap.get(i);
+                    heap.set(i, heap.get(2 * i));
+                    heap.set(2 * i, tmp);
+                    i = 2 * i;
+                } else {
+                    break;
+                }
+            }
+            cur--;
+        }
+        return;
     }
 }
