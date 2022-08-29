@@ -7,12 +7,3 @@ function fibonacci(n) {
     // Recursive case: fib(n) = fib(n - 1) + fib(n - 2)
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
-
-// F(0) = 0
-// F(1) = 1
-// F(2) = 1
-// F(3) = 2
-// F(4) = 3
-// F(5) = 5
-
-console.log(fibonacci(5));
