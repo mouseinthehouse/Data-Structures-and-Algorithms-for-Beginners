@@ -30,7 +30,8 @@ public class Heap {
 
     public int pop() {
         if (heap.size() == 1) {
-            //return null;
+            // Normally we would throw an exception if heap is empty.
+            return -1;
         }
         if (heap.size() == 2) {
             return heap.remove(heap.size() - 1); // equivalent to heap.remove(1)
