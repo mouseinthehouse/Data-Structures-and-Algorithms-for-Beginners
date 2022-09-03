@@ -56,7 +56,7 @@ public class DoublyLinkedList {
     public void print() {
         DoublyLinkedListNode curr = head.next;
         while (curr != tail) {
-            System.out.println(curr.val + " -> ");
+            System.out.print(curr.val + " -> ");
             curr = curr.next;
         }           
         System.out.println();

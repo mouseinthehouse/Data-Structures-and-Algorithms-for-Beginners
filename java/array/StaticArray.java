@@ -41,11 +41,10 @@ public class StaticArray {
         // No need to 'remove' arr[i], since we already shifted
     }
 
-    public void printArr(int[] arr, int capacity) {
-        for (int i = 0; i < capacity; i++) {
-            System.out.println(arr[i]);
+    public void printArr(int[] arr, int length) {
+        for (int i = 0; i < length; i++) {
+            System.out.print(arr[i] + " ");
         }      
+        System.out.println();
     }
 }    
-    
-    

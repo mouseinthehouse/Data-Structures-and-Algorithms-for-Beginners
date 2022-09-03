@@ -29,9 +29,14 @@ public class AdjacencyList {
         adjList.put("B", new ArrayList<String>());
 
         for (String[] edge: edges) {
-            String src = edge[0];
-            String dst = edge[1];
-            adjList.put(src, adjList.get(dst));    
+            String src = edge[0], dst = edge[1];
+            if (!adjList.containsKey(src)) {
+                adjList.put(src, new ArrayList<String>());    
+            }
+            if (!adjList.containsKey(dst)) {
+                adjList.put(dst, new ArrayList<String>());    
+            }
+            adjList.get(src).add(dst);    
         }
         return adjList;
     }
@@ -71,7 +76,7 @@ public class AdjacencyList {
                     return length;
                 }
                 for (String neighbor: adjList.get(curr)) {
-                    if (visit.contains(neighbor)) {
+                    if (!visit.contains(neighbor)) {
                         visit.add(neighbor);
                         q.add(neighbor);
                     }

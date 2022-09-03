@@ -42,7 +42,7 @@ public class SinglyLinkedList {
     public void print() {
         ListNode curr = head.next;
         while (curr != null) {
-            System.out.println(curr.val + " -> ");
+            System.out.print(curr.val + " -> ");
             curr = curr.next;
         }
 

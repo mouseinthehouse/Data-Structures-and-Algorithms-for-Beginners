@@ -1,11 +1,19 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 // leftChild = heap[2 * i]
 // rightChild = heap[(2 * i) + 1] 
 // parent = heap[i // 2]
 
 public class Heap {
+    
+    List<Integer> heap;
+
+    public Heap() {
+        heap = new ArrayList<Integer>();
+        heap.add(0);
+    }
     // ... not showing push, pop to save space.
 
     public void heapify(ArrayList<Integer> arr) {
