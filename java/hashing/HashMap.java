@@ -1,9 +1,9 @@
 /* 
 public class Pair {
-    int key;
-    int val;
+    String key;
+    String val;
 
-    public Pair(int key, int val) {
+    public Pair(String key, String val) {
         this.key = key;
         this.val = val;
     }
@@ -24,7 +24,6 @@ public class HashMap {
 
     public int hash(String key) {
         int index = 0;
-        char c;
         for (int i = 0; i < key.length(); i++) {
             index+= (int) key.charAt(i);
         }
