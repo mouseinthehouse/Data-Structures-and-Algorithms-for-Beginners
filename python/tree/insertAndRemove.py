@@ -41,3 +41,4 @@ def remove(root, val):
             root.val = minNode.val
             root.right = remove(root.right, minNode.val)
     return root
+

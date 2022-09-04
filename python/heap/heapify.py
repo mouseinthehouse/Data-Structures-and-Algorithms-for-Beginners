@@ -9,7 +9,7 @@ class Heap:
         arr.append(arr[0])
 
         self.heap = arr
-        cur = (len(self.heap ) - 1) // 2
+        cur = (len(self.heap) - 1) // 2
         while cur > 0:
             # Percolate down
             i = cur
