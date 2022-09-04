@@ -21,9 +21,3 @@ function binarySearch(arr, target) {
     }
     return -1;
 }
-
-console.log(binarySearch(arr, 10));
-console.log(binarySearch(arr, 0));
-console.log(binarySearch(arr, 1));
-console.log(binarySearch(arr, 5));
-console.log(binarySearch(arr, 6));

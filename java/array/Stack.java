@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+// Implementing a stack is trivial using a dynamic array
+// (which we implemented earlier).
 public class Stack {
 
     ArrayList<Integer> stack = new ArrayList<Integer>();
