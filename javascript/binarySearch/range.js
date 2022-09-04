@@ -26,8 +26,3 @@ function isCorrect(n) {
         return 0;
     }
 }
-
-
-
-console.log(binarySearch(10,20));
-
