@@ -5,7 +5,7 @@ def insertEnd(arr, n, length, capacity):
     if length < capacity:
         arr[length] = n
 
-# Remove from the last position in the array of the array
+# Remove from the last position in the array if the array
 # is not empty (i.e. length is non-zero).
 def removeEnd(arr, length):
     if length > 0:

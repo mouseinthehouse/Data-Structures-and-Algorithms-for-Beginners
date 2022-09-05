@@ -12,7 +12,7 @@ void insertEnd(int arr[], int n, int length, int capacity) {
     }
 }
 
-// Remove from the last position in the array of the array
+// Remove from the last position in the array if the array
 // is not empty (i.e. length is non-zero).
 void removeEnd(int arr[], int length) {
     if (length > 0) {

@@ -9,7 +9,7 @@ public class StaticArray {
         }
     }    
             
-    // Remove from the last position in the array of the array
+    // Remove from the last position in the array if the array
     // is not empty (i.e. length is non-zero).
     public void removeEnd(int[] arr, int length) {
         if (length > 0) {
