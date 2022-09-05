@@ -20,7 +20,7 @@ public class Heap {
         int i = heap.size() - 1;
 
         // Percolate up
-        while (heap.get(i) < heap.get(i / 2)) {
+        while (i > 1 && heap.get(i) < heap.get(i / 2)) {
             int tmp = heap.get(i);
             heap.set(i, heap.get(i / 2));
             heap.set(i / 2, tmp);

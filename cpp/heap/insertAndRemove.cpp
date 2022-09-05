@@ -16,7 +16,7 @@ public:
         int i = heap_.size() - 1;
 
         // Percolate up
-        while (heap_[i] < heap_[i / 2]) {
+        while (i > 1 && heap_[i] < heap_[i / 2]) {
             int tmp = heap_[i];
             heap_[i] = heap_[i / 2];
             heap_[i / 2] = tmp;
