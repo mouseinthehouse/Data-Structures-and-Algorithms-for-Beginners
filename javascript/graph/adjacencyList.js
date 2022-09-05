@@ -6,7 +6,6 @@ class GraphNode {
     }
 } 
 
-
 function buildAdjList() {
     let adjList = new Map();
     let edges = [["A", "B"], ["B", "C"], ["B", "E"], ["C", "E"], ["E", "D"]];

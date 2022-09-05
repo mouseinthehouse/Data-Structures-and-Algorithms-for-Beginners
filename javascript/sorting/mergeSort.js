@@ -1,8 +1,5 @@
-
-
-function mergeSort(arr, l,  r) { // array, starting index of array, last index of array
+function mergeSort(arr, l,  r) {
     if (l < r) {
-
         // Find the middle point of arr
         let m = Math.floor((l + r) / 2);
 
@@ -52,15 +49,11 @@ function merge(arr, l,  m, r) {
         k++;
     }
     // One of the halfs will have elements remaining
-
-    // Copy remaining elements of L[] if any 
     while (i < length1) {
         arr[k] = L[i];
         i++;
         k++;
     }
-
-    // Copy remaining elements of R[] if any 
     while (j < length2) {
         arr[k] = R[j];
         j++;

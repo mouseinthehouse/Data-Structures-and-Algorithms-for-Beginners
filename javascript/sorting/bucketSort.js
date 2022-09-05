@@ -1,4 +1,3 @@
-// Java implementation of Bucket Sort
 function bucketSort(arr) {
     // Assuming arr only contains 0, 1 or 2
     const counts = [0, 0, 0];

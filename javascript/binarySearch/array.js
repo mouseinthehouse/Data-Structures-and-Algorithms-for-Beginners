@@ -1,10 +1,5 @@
 const arr = [1, 3, 3, 4, 5, 6, 7, 8]
 
-/**
- * @param {Array} arr
- * @param {let} target
- * @return {let}
- */
 function binarySearch(arr, target) {
     let L = 0, R = arr.length - 1;
 

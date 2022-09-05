@@ -1,5 +1,4 @@
-
-//Matrix (2D Grid)
+// Matrix (2D Grid)
 let grid = [[0, 0, 0, 0],
             [1, 1, 0, 0],
             [0, 0, 0, 1],
@@ -12,12 +11,8 @@ function bfs(grid) {
     let visit = new Array(4).fill(0).map(() => Array(4).fill(0)); // 4x4 2d array
     let queue = new Array();
 
-    
-
     queue.push(new Array(2).fill(0)); // Add {0, 0}
     visit[0][0] = 1;
-
-
 
     let length = 0;
     while (queue.length > 0) {
