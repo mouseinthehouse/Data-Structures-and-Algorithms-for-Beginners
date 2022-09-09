@@ -14,7 +14,7 @@ public class StaticArray {
     public void removeEnd(int[] arr, int length) {
         if (length > 0) {
             // Overwrite last element with some default value.
-            // We would also the length to decreased by 1.
+            // We would also consider the length to be decreased by 1.
             arr[length - 1] = 0;
             length--;
         }
@@ -27,7 +27,7 @@ public class StaticArray {
         for (int index = length - 1; index > i - 1; index--) {
             arr[index + 1] = arr[index];
         }
-        //Insert at i
+        // Insert at i
         arr[i] = n;
     }
 
