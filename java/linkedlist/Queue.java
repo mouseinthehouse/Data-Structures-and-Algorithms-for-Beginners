@@ -32,13 +32,15 @@ public class Queue {
 
     public int dequeue() {
         if (this.left == null) {
-        // Queue is empty 
+            // Queue is empty 
             System.exit(0);
         }
         int val = this.left.val;
         this.left = this.left.next;
+        if (this.left == null) {
+            this.right = null;
+        }
         return val;
-        
     }
 
     public void print() {
