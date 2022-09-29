@@ -27,6 +27,8 @@ class Queue:
         # Remove left node and return value
         val = self.left.val
         self.left = self.left.next
+        if not self.left:
+            self.right = None
         return val
 
     def print(self):

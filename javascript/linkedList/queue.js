@@ -34,6 +34,9 @@ class Queue {
         // Remove left node and return value
         const val = this.left.val;
         this.left = this.left.next;
+        if (!this.left) {
+            this.right = null;
+        }
         return val;    
     }
 

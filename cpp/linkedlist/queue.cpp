@@ -43,6 +43,9 @@ public:
         // Remove left node and return value
         int val = left->val_;
         left = left->next;
+        if (!left) {
+            right = nullptr;
+        }
         return val;
     }
 
