@@ -34,7 +34,10 @@ public class SinglyLinkedList {
         }
         
         // Remove the node ahead of curr
-        if (curr != null) {
+        if (curr != null && curr.next != null) {
+            if (curr.next == tail) {
+                tail = curr;
+            }
             curr.next = curr.next.next;
         }
     }

@@ -40,7 +40,10 @@ public:
         }
         
         // Remove the node ahead of curr
-        if (curr) {
+        if (curr && curr->next) {
+            if (curr->next == tail) {
+                tail = curr;
+            }
             curr->next = curr->next->next;
         }
     }

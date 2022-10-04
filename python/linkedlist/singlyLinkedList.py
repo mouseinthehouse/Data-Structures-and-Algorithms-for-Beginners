@@ -23,12 +23,14 @@ class LinkedList:
             curr = curr.next
         
         # Remove the node ahead of curr
-        if curr:
+        if curr and curr.next:
+            if curr.next == self.tail:
+                self.tail = curr
             curr.next = curr.next.next
 
     def print(self):
         curr = self.head.next
         while curr:
-            print(curr.val, ' -> ')
+            print(curr.val, " -> ", end="")
             curr = curr.next
         print()

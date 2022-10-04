@@ -28,7 +28,10 @@ class LinkedList {
         }
 
         // Remove the node ahead of curr
-        if (curr != null) {
+        if (curr && curr.next) {
+            if (curr.next == this.tail) {
+                this.tail = curr;
+            }
             curr.next = curr.next.next;
         }
     }
