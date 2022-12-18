@@ -28,7 +28,7 @@ func memoization(_ r: Int, _ c: Int, _ rows: Int, _ cols: Int, _ cache: inout [[
   return cache[r][c]
 }
 
-// Dyanmic Programming - Time: O(n * m), Space: O(m), where m is num of cols
+// Dynamic Programming - Time: O(n * m), Space: O(m), where m is num of cols
 func dp(_ rows: Int, _ cols: Int) -> Int {
   var prevRow = Array(repeating: 0, count: cols)
 
