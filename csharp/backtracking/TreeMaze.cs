@@ -1,4 +1,7 @@
-﻿/*  Definition of TreeNode:
+﻿using System;
+using System.Collections;
+
+/*  Definition of TreeNode:
 public class TreeNode
 {
     public int Val { get; set; }

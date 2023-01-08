@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class BucketSort {
 
     // Java implementation of Bucket Sort

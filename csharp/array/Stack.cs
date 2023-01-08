@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 
 // Implementing a stack is trivial using a dynamic array
 // (which we implemented earlier).
@@ -5,9 +7,7 @@ public class Stack
 {
     ArrayList stack = new();
 
-    public Stack()
-    {
-    }
+    public Stack() {}
 
     public void Push(int n)
     {

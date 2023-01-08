@@ -1,4 +1,7 @@
-﻿public class Counting
+﻿using System;
+using System.Collections;
+
+public class Counting
 {
     public static void main(String[] args)
     {

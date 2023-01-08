@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class MergeSort {
     
     public static int[] mergeSort(int[] arr, int l, int r) { // array, starting index of array, last index of array

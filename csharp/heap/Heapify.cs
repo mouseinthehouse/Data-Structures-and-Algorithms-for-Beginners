@@ -1,4 +1,7 @@
-﻿public class Heapify
+﻿using System;
+using System.Collections;
+
+public class Heapify
 {
     // leftChild = heap[2 * i]
     // rightChild = heap[(2 * i) + 1] 
@@ -8,10 +11,7 @@
 
     public Heapify()
     {
-        heap = new List<int>
-        {
-            0
-        };
+        heap = new List<int>{0};
     }
     public void HeapiFy(List<int> arr)
     {

@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class QuickSort {
     public static int[] quickSort(int[] arr, int s, int e) {
         if (e - s + 1 <= 1) {

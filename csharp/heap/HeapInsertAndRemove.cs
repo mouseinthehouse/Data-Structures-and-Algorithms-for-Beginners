@@ -1,4 +1,7 @@
-﻿public class HeapInsertAndRemove
+﻿using System;
+using System.Collections;
+
+public class HeapInsertAndRemove
 {
     // leftChild = heap[2 * i]
     // rightChild = heap[(2 * i) + 1] 
@@ -8,10 +11,7 @@
 
     public HeapInsertAndRemove()
     {
-        heap = new List<int>
-        {
-            0
-        };
+        heap = new List<int>{0};
     }
 
     public void Push(int val)
@@ -33,13 +33,13 @@
     {
         if (heap.Count == 1)
         {
-            //return null;
+            // return null;
         }
         if (heap.Count == 2)
         {
-            int ele = heap[heap.Count - 1];
+            int res = heap[heap.Count - 1];
             heap.Remove(heap.Count - 1);
-            return ele;// equivalent to heap.remove(1)
+            return res; // equivalent to heap.remove(1)
         }
 
         int res = heap[1];
