@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NeetCodeTester.dynamicProgramming
-{
+﻿ 
     class Fibonacci
     {
         // Brute Force
@@ -53,6 +46,3 @@ namespace NeetCodeTester.dynamicProgramming
             return dp[1];
         }
     }
-}
-
- 

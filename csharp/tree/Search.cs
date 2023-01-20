@@ -1,7 +1,3 @@
-
-
-using System;
-
 public class Search
 {
     public bool SearchNode(TreeNode root, int target)
